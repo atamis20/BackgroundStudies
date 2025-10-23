@@ -84,6 +84,9 @@ root -l 'BackgroundAnalysis.C()'
 #No input will default to the file names generated in the previous steps, alternatively
 root -l 'BackgroundAnalysis.C("DISFileName","bg_elecFileName","bg_protonFileName");
 
+# Changing Input Files
+Luminosity of beam, background rates, and DIS cross section are all set at the top of the file, and should be changed when using differently defined hepmcs as inputs.
+
 
 
 

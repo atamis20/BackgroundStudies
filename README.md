@@ -48,7 +48,7 @@ cmake --install EICrecon/build
 
 
 
-##### Analysis Code
+# Analysis Code
 Download contents of this directory into the irt-sandbox directory
 
 #Enter eic-shell and source environ

@@ -68,7 +68,7 @@ npsim --runType run --compactFile $EIC_SHELL_PREFIX/share/epic/epic_tracking_and
 # Run Simulation for proton beam+gas
 npsim --runType run --compactFile $EIC_SHELL_PREFIX/share/epic/epic_tracking_and_pfrich.xml --outputFile ./beam_gas_proton_275.edm4hep.tracking_and_pfrich.root --part.userParticleHandler= --inputFiles root://dtn-eic.jlab.org//volatile/eic/EPIC/EVGEN/BACKGROUNDS/BEAMGAS/proton/pythia8.306-1.0/275GeV/pythia8.306-1.0_ProtonBeamGas_275GeV_run001.hepmc3.tree.root -N 100000
 
-I Generated DIS files locally, I've attached my file, which was quickly based off the pythia example of writing to hepmc, and can be used in the examples folder of a pythia instillation with 'make mymain_WriteToHepMC', or you can copy all of the settings into your hepmc writing file of choice.  I've also included my hepmc here.
+I Generated DIS files locally, using code which was quickly based off the pythia example of writing to hepmc, and can be used in the examples folder of a pythia instillation with 'make mymain_WriteToHepMC', or you can copy all of the settings into your hepmc writing file of choice. 
 
 # Run Simulation for DIS
 npsim --runType run --compactFile $EIC_SHELL_PREFIX/share/epic/epic_tracking_and_pfrich.xml --outputFile ./DIS_275_10.edm4hep.tracking_and_pfrich.root --part.userParticleHandler= --inputFiles ./PYTHIA8_eic_50000Events_100GeV_decays_off.hepmc -N 20000

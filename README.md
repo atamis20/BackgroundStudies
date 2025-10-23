@@ -6,7 +6,7 @@ https://github.com/eic/EICrecon/tree/irt-2.1a/irt-sandbox
 copied here:
 
 # Change to your local working directory;
-cd <your-working-directory>
+cd your-working-directory
 
 # Install eic-shell script and a docker container image known to work;
 curl -L https://github.com/eic/eic-shell/raw/main/install.sh     | bash -s --  --version 25.07.0-stable --no-cvmfs
@@ -52,7 +52,7 @@ cmake --install EICrecon/build
 Download contents of this directory into the irt-sandbox directory
 
 #Enter eic-shell and source environ
-cd <your-working-directory>
+cd your-working-directory
 ./eic-shell
 . EICrecon/irt-sandbox/environ.sh
 

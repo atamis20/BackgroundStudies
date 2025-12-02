@@ -25,14 +25,20 @@ git clone -b ${branch} https://github.com/eic/EICrecon.git
 
 # Install EDM4eic;
 git clone -b ${branch} https://github.com/eic/EDM4eic.git
+
 cmake -S EDM4eic -B EDM4eic/build -DBUILD_DATA_MODEL=ON -DCMAKE_INSTALL_PREFIX=$EIC_SHELL_PREFIX -Wno-dev
+
 cmake --build EDM4eic/build -j8
+
 cmake --install EDM4eic/build
 
 # Install IRT;
 git clone -b ${branch} https://github.com/eic/irt.git
+
 cmake -S irt -B irt/build -DCMAKE_BUILD_TYPE=Debug -DDELPHES=OFF -DEVALUATION=OFF -DCMAKE_INSTALL_PREFIX=$EIC_SHELL_PREFIX -Wno-dev
+
 cmake --build irt/build -j8
+
 cmake --install irt/build
 
 # Install epic;
@@ -45,7 +51,9 @@ cmake --install epic/build
 
 # Install EICrecon;
 cmake -S EICrecon -B EICrecon/build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_FIND_DEBUG_MODE=OFF -DCMAKE_INSTALL_PREFIX=$EIC_SHELL_PREFIX -Wno-dev
+
 cmake --build EICrecon/build -j8
+
 cmake --install EICrecon/build
 
 
@@ -54,13 +62,17 @@ cmake --install EICrecon/build
 Download contents of this directory into the irt-sandbox directory
 
 #Enter eic-shell and source environ
+
 cd your-working-directory
+
 ./eic-shell
+
 . EICrecon/irt-sandbox/environ.sh
 
 ## Source files for beam gas are stored in jlab, similar files also exist for 18GeV and 100GeV, just change all instances of 10 or 275.  Can get information about rate on the wiki
 
 https://wiki.bnl.gov/EPIC/index.php?title=Electron_Beam_Gas
+
 https://wiki.bnl.gov/EPIC/index.php?title=Hadron_Beam_Gas
 
 
@@ -78,6 +90,7 @@ npsim --runType run --compactFile $EIC_SHELL_PREFIX/share/epic/epic_tracking_and
 
 # Make Directory to store output plots
 mkdir Plots
+
 mkdir Plots/bg_elec Plots/bg_proton Plots/DIS Plots/Total
 
 # Run Analysis Code

@@ -38,7 +38,9 @@ cmake --install irt/build
 # Install epic;
 git clone -b  ${branch} https://github.com/eic/epic.git
 cmake -S epic -B epic/build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$EIC_SHELL_PREFIX -DWITH_IRT=YES -Wno-dev
+
 cmake --build epic/build -j8
+
 cmake --install epic/build
 
 # Install EICrecon;
